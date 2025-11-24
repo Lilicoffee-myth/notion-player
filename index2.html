@@ -68,10 +68,10 @@ body
 #player-track
 {
     position: absolute;
-    top: 0;
+    top:  0;
     right: 15px;
     left: 15px;
-    padding: 13px 22px 10px 184px;
+    padding: 10px 22px 5px 184px;/* 13px_top 22px_right 10px_bottom 184px_left*/
     background-color: darkblue; /*change header color here*/
     border-radius: 18px 18px 0 0;
     transition: 0.3s ease top;
@@ -188,7 +188,7 @@ body
     height: 100%;
     background-color: #fff; /*change player body color here*/
     box-shadow: 0 1px 5px #cecece;
-    border-radius: 15px;
+    border-radius: 15 px;
     z-index: 2;
 }
 
@@ -392,16 +392,18 @@ body
                     <div id="ins-time"></div>
                     <div id="s-hover"></div>
                     <div id="seek-bar"></div>
-                </div>
+                </div>p
             </div>
             <div id="player-content">
                 <div id="album-art">
-                   <img src="https://raw.githubusercontent.com/Quynny810/music/main/5.jpeg" class="active" id="_1">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/2.jpg" id="_2">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/3.jpeg" id="_3">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/4.jpg" id="_4">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/1.jpeg" id="_5">
-                     <img src="https://raw.githubusercontent.com/Quynny810/music/main/6.jpg" id="_6">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/monetindie.jpg" class="active" id="_1">
+                   <!-- <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/monetindie.jpg" id="_1"> -->
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/monetindie.jpg" id="_2">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/sunflower city I II.jpg" id="_3">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/sunflower city I II.jpg" id="_4">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/love beautiful field.jpg" id="_5">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/love beautiful field.jpg" id="_6">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/love beautiful field.jpg" id="_7">
                     <div id="buffer-box">Buffering ...</div>
                 </div>
                 <div id="player-controls">
@@ -433,15 +435,16 @@ body
     $(function()
 {
 var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
-        albums = ['⋆Hype Boy⋆','⋆How Sweet⋆','⋆Super Shy⋆','⋆Ditto⋆','⋆Supernatural⋆','⋆ETA⋆'], 
-        trackNames = ['NewJeans','NewJeans','NewJeans','NewJeans','NewJeans','NewJeans'], 
-        albumArtworks = ['_1','_2','_3','_4','_5','_6'], 
-        trackUrl = ['https://raw.githubusercontent.com/Quynny810/music/main/%20Hype%20Boy.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20How%20Sweet.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20Super%20Shy.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20Ditto.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20Supernatural.mp3', 
-                    'https://raw.githubusercontent.com/Quynny810/music/main/ETA.mp3'], 
+        albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III'], 
+        trackNames = ['Sunset','NewJeans','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams'], 
+        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7',], 
+        trackUrl = ['https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life III.mp3'], 
         playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
     function playPause()
     {
@@ -487,9 +490,9 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
         if( (ctMinutes < 0) || (ctSeconds < 0) )
                         return;
                 
-                if(ctMinutes < 10)
+                if(ctMinutes < 12)
                         ctMinutes = '0'+ctMinutes;
-                if(ctSeconds < 10)
+                if(ctSeconds < 12)
                         ctSeconds = '0'+ctSeconds;
         
         if( isNaN(ctMinutes) || isNaN(ctSeconds) )
@@ -533,14 +536,14 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
                 
                 playProgress = (audio.currentTime / audio.duration) * 100;
                 
-                if(curMinutes < 10)
+                if(curMinutes < 12)
                         curMinutes = '0'+curMinutes;
-                if(curSeconds < 10)
+                if(curSeconds < 12)
                         curSeconds = '0'+curSeconds;
                 
-                if(durMinutes < 10)
+                if(durMinutes < 12)
                         durMinutes = '0'+durMinutes;
-                if(durSeconds < 10)
+                if(durSeconds < 12)
                         durSeconds = '0'+durSeconds;
         
         if( isNaN(curMinutes) || isNaN(curSeconds) )
