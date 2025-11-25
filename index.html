@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Varela+Round&display=swaps'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'><link rel="stylesheet" href="./style.css">
 
     <style>
       
@@ -14,9 +14,9 @@ body > iframe:first-child { display: none !important; }
 
 body
 {
-    font-family: "Varela Round", sans-serif;
+    font-family: Monospace;
     margin: 0;
-    background-color: #ffeff5;
+    background-color: rgba(255,255,255,0);
 }
 
 #app-cover
@@ -37,7 +37,7 @@ body
     right: -30px;
     bottom: -30px;
     left: -30px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -53,7 +53,7 @@ body
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0);
     opacity: 0.51;
     z-index: 2;
 }
@@ -68,12 +68,12 @@ body
 #player-track
 {
     position: absolute;
-    top: 0;
+    top:  0;
     right: 15px;
     left: 15px;
-    padding: 13px 22px 10px 184px;
-    background-color: #fff7f7;
-    border-radius: 15px 15px 0 0;
+    padding: 10px 22px 5px 184px;/* 13px_top 22px_right 10px_bottom 184px_left*/
+    background-color: darkblue; /*change header color here*/
+    border-radius: 18px 18px 0 0;
     transition: 0.3s ease top;
     z-index: 1;
 }
@@ -85,14 +85,14 @@ body
 
 #album-name
 {
-    color: #54576f;
+    color: #fff; /*change song name text color here*/
     font-size: 17px;
     font-weight: bold;
 }
 
 #track-name
 {
-    color: #acaebd;
+    color: #b8d5ff; /*change artist name text color here*/
     font-size: 13px;
     margin: 2px 0 13px 0;
 }
@@ -118,14 +118,14 @@ body
 {
     color: transparent;
     font-size: 11px;
-    background-color: #ffe8ee;
+    background-color: rgba(255,255,255,0);
     border-radius: 10px;
     transition: 0.3s ease all;
 }
 
 #track-time.active #current-time, #track-time.active #track-length
 {
-    color: #f86d92;
+    color: #fff; /*change song time color here*/
     background-color: transparent;
 }
 
@@ -138,7 +138,7 @@ body
 
 #s-area
 {
-    background-color:#ffe8ee;
+    background-color:#fff; /*change song bar color here*/
     cursor: pointer;
 }
 
@@ -146,7 +146,7 @@ body
 {
     position: absolute;
     top: -29px;
-    color: #fff;
+    color: #fff; /*change song time color here*/
     font-size: 12px;
     white-space: pre;
     padding: 5px 6px;
@@ -166,7 +166,7 @@ body
 
 #ins-time, #s-hover
 {
-    background-color: #3b3d50;
+    background-color: #3b3d50; 
 }
 
 #seek-bar
@@ -177,7 +177,7 @@ body
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #fd6d94;
+    background-color: #b8d5ff; /*change song running bar color here*/
     transition: 0.2s ease width;
     z-index: 1;
 }
@@ -186,9 +186,9 @@ body
 {
     position: relative;
     height: 100%;
-    background-color: #fff;
+    background-color: #fff; /*change player body color here*/
     box-shadow: 0 1px 5px #cecece;
-    border-radius: 15px;
+    border-radius: 15 px;
     z-index: 2;
 }
 
@@ -329,25 +329,32 @@ body
 .button i
 {
     display: block;
-    color: #d6dee7;
+    color: darkblue; /*change play button color here*/
     font-size: 26px;
     text-align: center;
     line-height: 1;
+        border-radius: 18px;
+
 }
 
 .button, .button i
 {
     transition: 0.2s ease all;
+        border-radius: 18px;
+
 }
 
 .button:hover
 {
-    background-color: #d6d6de;
+    background-color: darkblue; /*change button hover color here*/
+    border-radius: 18px;
 }
 
 .button:hover i
 {
     color: #fff;
+        border-radius: 18px;
+
 }
 
 #ytd-url {
@@ -385,15 +392,18 @@ body
                     <div id="ins-time"></div>
                     <div id="s-hover"></div>
                     <div id="seek-bar"></div>
-                </div>
+                </div>p
             </div>
             <div id="player-content">
                 <div id="album-art">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/1.jpeg" class="active" id="_1">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/2.jpg" id="_2">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/3.jpeg" id="_3">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/4.jpg" id="_4">
-                    <img src="https://raw.githubusercontent.com/Quynny810/music/main/5.jpeg" id="_5">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/monetindie.jpg" class="active" id="_1">
+                   <!-- <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/monetindie.jpg" id="_1"> -->
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/monetindie.jpg" id="_2">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/sunflower city I II.jpg" id="_3">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/sunflower city I II.jpg" id="_4">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/love beautiful field.jpg" id="_5">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/love beautiful field.jpg" id="_6">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/love beautiful field.jpg" id="_7">
                     <div id="buffer-box">Buffering ...</div>
                 </div>
                 <div id="player-controls">
@@ -424,17 +434,18 @@ body
   <script type="text/javascript">
     $(function()
 {
-    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
-        albums = ['⋆Supernatural⋆','⋆How Sweet⋆','⋆Super Shy⋆','⋆Ditto⋆','⋆HypeBoy⋆'], 
-        trackNames = ['NewJeans','NewJeans','NewJeans','NewJeans','NewJeans'], 
-        albumArtworks = ['_1','_2','_3','_4','_5'], 
-        trackUrl = ['https://raw.githubusercontent.com/Quynny810/music/main/%20Supernatural.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20How%20Sweet.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20Super%20Shy.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20Ditto.mp3',
-                    'https://raw.githubusercontent.com/Quynny810/music/main/%20Hype%20Boy.mp3'],
+var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
+        albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III'], 
+        trackNames = ['Sunset','NewJeans','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams'], 
+        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7',], 
+        trackUrl = ['https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life III.mp3'], 
         playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
-
     function playPause()
     {
         setTimeout(function()
@@ -479,9 +490,9 @@ body
         if( (ctMinutes < 0) || (ctSeconds < 0) )
                         return;
                 
-                if(ctMinutes < 10)
+                if(ctMinutes < 12)
                         ctMinutes = '0'+ctMinutes;
-                if(ctSeconds < 10)
+                if(ctSeconds < 12)
                         ctSeconds = '0'+ctSeconds;
         
         if( isNaN(ctMinutes) || isNaN(ctSeconds) )
@@ -525,14 +536,14 @@ body
                 
                 playProgress = (audio.currentTime / audio.duration) * 100;
                 
-                if(curMinutes < 10)
+                if(curMinutes < 12)
                         curMinutes = '0'+curMinutes;
-                if(curSeconds < 10)
+                if(curSeconds < 12)
                         curSeconds = '0'+curSeconds;
                 
-                if(durMinutes < 10)
+                if(durMinutes < 12)
                         durMinutes = '0'+durMinutes;
-                if(durSeconds < 10)
+                if(durSeconds < 12)
                         durSeconds = '0'+durSeconds;
         
         if( isNaN(curMinutes) || isNaN(curSeconds) )
