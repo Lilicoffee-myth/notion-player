@@ -437,14 +437,17 @@ body
 var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
         albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III'], 
         trackNames = ['Sunset','NewJeans','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams'], 
-        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7',], 
+        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9''_10',], 
         trackUrl = ['https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist I.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist II.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city I.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city II.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life I.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life II.mp3',
-                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life III.mp3'], 
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life III.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Ur life falling apart I.mp3'.
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Ur life falling apart II.mp3',
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main character vibes.mp3'], 
         playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
     function playPause()
     {
