@@ -448,9 +448,9 @@ body
     $(function()
 {
 var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
-        albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III'], 
+        albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III','Ur life falling apart','Ur life falling apart II','main character vibes','dark academia rock I','dark academia rock II','academic validation I','academic validation II','academic validation III','Greek Mythology I','Greek Mythology II','Fighting villains I','Fighting villains II','Julie & Phantoms I','Julie & Phantoms II','Julie & Phantoms III', 
         trackNames = ['Sunset','Sunset','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams'], 
-        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9''_10','_11','_12','_13','_14','_15','_16','_17','_18','_19','_20','_21','_22','_23','_24','_25'] 
+        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9''_10','_11','_12','_13','_14','_15','_16','_17','_18','_19','_20','_21','_22','] 
         trackUrl = ['https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist I.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist II.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city I.mp3',
@@ -471,9 +471,8 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains I.mp3',
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains II.mp3',
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms I.mp3', 
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms II.mp3
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms II.mp3',
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms III.mp3',
-                    
                     ]
         playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
     function playPause()
