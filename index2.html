@@ -72,7 +72,7 @@ body
     right: 15px;
     left: 15px;
     padding: 10px 22px 5px 184px;/* 13px_top 22px_right 10px_bottom 184px_left*/
-    background-color: d3968c; /*change header color here*/
+    background-color: #105666; /*change header color here*/
     border-radius: 18px 18px 0 0;
     transition: 0.3s ease top;
     z-index: 1;
@@ -85,14 +85,14 @@ body
 
 #album-name
 {
-    color: #fff; /*change song name text color here*/
+    color: #d3968c; /*change song name text color here*/
     font-size: 17px;
     font-weight: bold;
 }
 
 #track-name
 {
-    color: #b8d5ff; /*change artist name text color here*/
+    color: #d3968c; /*change artist name text color here*/
     font-size: 13px;
     margin: 2px 0 13px 0;
 }
@@ -412,6 +412,11 @@ body
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/too much.jpg" id="_13">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/too much.jpg" id="_14">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/too much.jpg" id="_15">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Greek myths vibes.jpg" id="_16">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Greek myths vibes.jpg" id="_17">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/mha final garthering.jpg" id="_18">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/mha final garthering.jpg" id="_19">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie and the phantoms.jpg" id="_20">
                     <div id="buffer-box">Buffering ...</div>
                 </div>
                 <div id="player-controls">
@@ -445,7 +450,7 @@ body
 var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
         albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III'], 
         trackNames = ['Sunset','Sunset','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams'], 
-        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9''_10','_11','_12','_13','_14','_15','_16','_17','_18','_19','_20'] 
+        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9''_10','_11','_12','_13','_14','_15','_16','_17','_18','_19','_20','_21','_22','_23','_24','_25'] 
         trackUrl = ['https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist I.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist II.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city I.mp3',
@@ -461,6 +466,13 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/academic validation I.mp3',
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/academic validation II.mp3',
                     'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/academic validation III.mp3',
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Greek Mythology I.mp3',
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Greek Mythology II.mp3',
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains I.mp3',
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains II.mp3',
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms I.mp3', 
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms II.mp3
+                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms III.mp3',
                     
                     ]
         playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
