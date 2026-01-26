@@ -356,6 +356,11 @@ body
         border-radius: 18px;
 
 }
+/*.btn {
+   width: 100%;
+   min-width: 50px; 
+   max-width: 300px; 
+    }*/
 
 #ytd-url {
   display: block;
@@ -409,14 +414,16 @@ body
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/MC Energy.jpg" id="_10">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/dancing fae.jpg" id="_11">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/dancing fae.jpg" id="_12">
-                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/too much.jpg" id="_13">
-                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/too much.jpg" id="_14">
-                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/too much.jpg" id="_15">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Too much.jpg" id="_13">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Too much.jpg" id="_14">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Too much.jpg" id="_15">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Greek myths vibes.jpg" id="_16">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Greek myths vibes.jpg" id="_17">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/mha final garthering.jpg" id="_18">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/mha final garthering.jpg" id="_19">
                     <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie and the phantoms.jpg" id="_20">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie and the phantoms.jpg" id="_21">
+                    <img src="https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie and the phantoms.jpg" id="_22">
                     <div id="buffer-box">Buffering ...</div>
                 </div>
                 <div id="player-controls">
@@ -448,9 +455,9 @@ body
     $(function()
 {
 var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, 
-        albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III','Ur life falling apart','Ur life falling apart II','main character vibes','dark academia rock I','dark academia rock II','academic validation I','academic validation II','academic validation III','Greek Mythology I','Greek Mythology II','Fighting villains I','Fighting villains II','Julie & Phantoms I','Julie & Phantoms II','Julie & Phantoms III', 
-        trackNames = ['Sunset','Sunset','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams'], 
-        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9''_10','_11','_12','_13','_14','_15','_16','_17','_18','_19','_20','_21','_22','] 
+        albums = ['Indie Rock I','Indie Rock II','Exploring I','Exploring II','Beautiful I','Beautiful II','Beautiful III','Ur life falling apart','Ur life falling apart II','main character vibes','dark academia rock I','dark academia rock II','academic validation I','academic validation II','academic validation III','Greek Mythology I','Greek Mythology II','Fighting villains I','Fighting villains II','Julie & Phantoms I','Julie & Phantoms II','Julie & Phantoms III',], 
+        trackNames = ['Sunset','Sunset','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams','Sunset','Sunset','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams','Sunset','Sunset','NewJeans','NewJeans','SunsetDreams','SunsetDreams','SunsetDreams','sunset',], 
+        albumArtworks = ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10','_11','_12','_13','_14','_15','_16','_17','_18','_19','_20','_21','_22',], 
         trackUrl = ['https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist I.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/indie rock playlist II.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Exploring city I.mp3',
@@ -459,20 +466,20 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life II.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Beautiful life III.mp3',
                     'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Ur life falling apart I.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Ur life falling apart II.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/main character vibes.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/dark academia rock I.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/dark academia rock II.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/academic validation I.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/academic validation II.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/academic validation III.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Greek Mythology I.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Greek Mythology II.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains I.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains II.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms I.mp3', 
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms II.mp3',
-                    'https://raw.githubsercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms III.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Ur life falling apart II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/main character vibes.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/dark academia rock I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/dark academia rock II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/academic validation I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/academic validation II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/academic validation III.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Greek Mythology I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Greek Mythology II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains I.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Fighting villains II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms I.mp3', 
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms II.mp3',
+                    'https://raw.githubusercontent.com/Lilicoffee-myth/notion-player/main/Julie & Phantoms III.mp3',
                     ]
         playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
     function playPause()
@@ -519,9 +526,9 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
         if( (ctMinutes < 0) || (ctSeconds < 0) )
                         return;
                 
-                if(ctMinutes < 12)
+                if(ctMinutes < 10)
                         ctMinutes = '0'+ctMinutes;
-                if(ctSeconds < 12)
+                if(ctSeconds < 10)
                         ctSeconds = '0'+ctSeconds;
         
         if( isNaN(ctMinutes) || isNaN(ctSeconds) )
@@ -565,14 +572,14 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
                 
                 playProgress = (audio.currentTime / audio.duration) * 100;
                 
-                if(curMinutes < 12)
+                if(curMinutes < 10)
                         curMinutes = '0'+curMinutes;
-                if(curSeconds < 12)
+                if(curSeconds < 10)
                         curSeconds = '0'+curSeconds;
                 
-                if(durMinutes < 12)
+                if(durMinutes < 10)
                         durMinutes = '0'+durMinutes;
-                if(durSeconds < 12)
+                if(durSeconds < 10)
                         durSeconds = '0'+durSeconds;
         
         if( isNaN(curMinutes) || isNaN(curSeconds) )
@@ -703,13 +710,7 @@ var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl
 });
   </script>
 </css>
-.btn {
-   width: 100%;
-   min-width: 50px; 
-   max-width: 300px; 
-    }
+
 
 </body>
 </html>
-
-
